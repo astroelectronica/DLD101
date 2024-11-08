@@ -1,0 +1,21 @@
+.title KiCad schematic
+.include "C:/AE/DLD101/_models/2N7002.spice.txt"
+.include "C:/AE/DLD101/_models/DLD101.spice.txt"
+.include "C:/AE/DLD101/_models/XPE_SPICE.lib"
+D2 /L1 /L2 XLampXPEwhite
+D1 VCC /L1 XLampXPEwhite
+R1 /DIM /G {RG}
+V1 /DIM 0 PULSE(0 {VPUL} {DELAY} {TR} {TF} {DUTY} {CYCLE})
+D3 /L2 /L3 XLampXPEwhite
+R3 VCC /D {RD}
+D4 /L3 /L4 XLampXPEwhite
+R2 /G 0 {RPD}
+XQ1 /D /G 0 N7002
+R4 /SET 0 {RSET}
+XU2 /K /D /D 0 unconnected-_U2-R1-PadP6_ /SET /SET DLD101
+D5 /L4 /L5 XLampXPEwhite
+D7 /L6 /L7 XLampXPEwhite
+D6 /L5 /L6 XLampXPEwhite
+D8 /L7 /K XLampXPEwhite
+V2 VCC 0 {VSOURCE}
+.end

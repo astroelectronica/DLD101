@@ -1,0 +1,32 @@
+*LTspice
+*
+*DLD101
+*Linear mode current sink led driver. XP-E white.
+*AE01003101
+*
+*netlist
+.include DLD101_XPE_WHITE.cir
+*
+*params
+.param VSOURCE=24
+.param VPUL=5
+.param RSET=1.6956
+.param RG=10K
+.param RPD=1Meg
+.param RD=82K
+*
+.param FREQ=400
+.param PERCENT=20
+.param DELAY=0
+.param REPEAT=4
+.param TR=50n
+.param TF=50n
+*
+.param CYCLE=1/FREQ
+.param X_BASE=(CYCLE*REPEAT)+DELAY
+.param DUTY=(PERCENT/100)*CYCLE
+*
+*transient response
+.tran 0 {X_BASE} 0 ;startup
+*
+.backanno
