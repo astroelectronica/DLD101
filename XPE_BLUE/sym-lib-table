@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DLD101")(type "KiCad")(uri "C:/AE/DLD101/_lib/DLD101.kicad_sym")(options "")(descr ""))
+)
